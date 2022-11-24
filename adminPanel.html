@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <title>Панель администратора</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function(){
+            $("#header").load("templates/header.html");
+        });
+    </script>
+
+    <script src="scripts/filter.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <main>
+        <section>
+            <h2>Корзина</h2>
+
+            <div>
+                <label for="item">Предмет:</label>
+                <input type="text" id="item" placeholder="Желаемый предмет">
+            </div>
+            <button id="add">Добавить</button>
+            <button id="sort">Сортировать</button>
+            <button id="clear">Очистить</button>
+            <div>
+                <h3>Корзина:</h3>
+                <ul id="basket" class="basket"></ul>
+            </div>
+
+            <script src="scripts/basket.js"></script>
+        </section>
+
+
+    </main>
+</body>
+</html>
